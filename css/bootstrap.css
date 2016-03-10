@@ -2304,7 +2304,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 3px solid #ddd;
+  border: 3px solid #000;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,

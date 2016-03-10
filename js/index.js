@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     var counter = 1;
 
-    var content = "<table class='table table-bordered text-center'>"
+    var content = "<table class='table table-bordered table-responsive text-center'>"
     for(i = 0; i < 10; i++){
         content += '<tr>';
         for(j = 0; j < 10; j++) {
