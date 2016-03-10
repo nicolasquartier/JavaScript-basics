@@ -7,6 +7,7 @@
     <title>Priemgetallen</title>
     <script src="./js/index.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/person.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
@@ -16,6 +17,10 @@
         var g = 255;
         var b = 255;
 
+        var r2 = 0;
+        var g2 = 0;
+        var b2 = 0;
+
         var next = 0;
         var counting = 0;
 
@@ -23,9 +28,11 @@
             if((next == 0)) {
                 if(counting == 0) {
                     g--;
+                    g2++;
                 }
                 else {
                     g++;
+                    g2--;
                 }
                 if(g == 0) {
                     counting = 1;
@@ -39,9 +46,11 @@
             else if(next == 1) {
                 if(counting == 1) {
                     r--;
+                    r2++;
                 }
                 else {
                     r++;
+                    r2--;
                 }
                 if(r == 0) {
                     counting = 0;
@@ -56,9 +65,11 @@
             else if(next == 2) {
                 if(counting == 0) {
                     b--;
+                    b2++;
                 }
                 else {
                     b++;
+                    b2--;
                 }
                 if(b == 0) {
                     counting = 1;

@@ -3,13 +3,13 @@ $(document).ready(function() {
 
     var counter = 1;
 
-    var content = "<table class='table table-bordered table-responsive text-center'>"
+    var content = "<table class='table table-bordered table-responsive text-center '>"
     for(i = 0; i < 10; i++){
         content += '<tr>';
         for(j = 0; j < 10; j++) {
             var isPrimeNumber = calculateIfPrimeNumber(counter);
             if(isPrimeNumber) {
-                content += '<td style="background-color: RED;: ">' + counter + '</td>';
+                content += '<td style="background-color: #ffed97;: ">' + counter + '</td>';
             }
             else {
                 content += '<td>' + counter + '</td>';
@@ -21,6 +21,7 @@ $(document).ready(function() {
     content += "</table>"
 
     $('#here_table').append(content);
+
 
 });
 
