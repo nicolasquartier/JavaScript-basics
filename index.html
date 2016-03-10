@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- JQuery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Priemgetallen</title>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script>
+        window.setTimeout(changeColor, 50);
+        var r = 255;
+        var g = 255;
+        var b = 255;
+
+        var next = 0;
+        var counting = 0;
+
+        function changeColor() {
+
+            if((next == 0)) {
+                if(counting == 0) {
+                    g--;
+                }
+                else {
+                    g++;
+                }
+                if(g == 0) {
+                    counting = 1;
+                    next++;
+                }
+                if(g == 255) {
+                    counting = 0;
+                    next++;
+                }
+            }
+            else if(next == 1) {
+                if(counting == 1) {
+                    r--;
+                }
+                else {
+                    r++;
+                }
+                if(r == 0) {
+                    counting = 0;
+                    next++;
+                }
+                if(r == 255) {
+                    counting = 1;
+                    next++;
+                }
+
+            }
+            else if(next == 2) {
+                if(counting == 0) {
+                    b--;
+                }
+                else {
+                    b++;
+                }
+                if(b == 0) {
+                    counting = 1;
+                    next = 0;
+                }
+                if(b == 255) {
+                    counting = 0;
+                    next = 0;
+                }
+            }
+
+            document.body.style.backgroundColor = "rgba(" + r + "," + g + "," + b + ", 100)";
+            window.setTimeout(changeColor, 50);
+        }
+    </script>
+
+</head>
+<body class="container">
+    <h1>Table of Prime Numbers</h1>
+
+    <div id="here_table">
+    </div>
+</body>
+
+
+</html>
